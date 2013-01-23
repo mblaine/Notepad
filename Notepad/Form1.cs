@@ -22,7 +22,6 @@ namespace Notepad
         public Form1(String[] args)
         {
             InitializeComponent();
-
             if(args.Length > 0 && args[0].Length > 0)
                 Open(args[0]);
         }
@@ -137,27 +136,28 @@ namespace Notepad
 
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            txtEditor.Undo();
 
         }
 
         private void redoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtEditor.Redo();
         }
 
         private void cutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtEditor.Cut();
         }
 
         private void copyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtEditor.Copy();
         }
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtEditor.Paste();
         }
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
